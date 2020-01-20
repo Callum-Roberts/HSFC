@@ -6,33 +6,49 @@ namespace QueueProject
 {
     public class Queue
     {
-        private Queue[] contents;
-        private int Front = 0;
-        private int back = 0;
+        private Object[] theItems;
+        private int front = 0;                  
+        private int back = 0;                   
+        private int maxSize = 4;               
+        private int length = 0;
 
-        public Queue (int maxSize)
+        public Queue (int theSize)
         {
-            contents = new Queue[maxSize];
+            maxSize = theSize;
+            theItems = new Object[theSize];
+             
         }
 
 
-        public bool Enqueue(Person thePerson)
+        public string Enqueue(Object theObject)
         {
-            if (back >= contents.Length)
+            if (length < maxSize)
+
             {
-                return false; 
+                return "True";
             }
-            contents[back] =  thePerson; 
-            back++; 
+            theItems[back] = theObject;
+            back = (back + 1) % maxSize;
+            length++;
+            return "full";
+         }
+        public bool AddPerson(Object theObject)
+        {
+            if (length >= maxSize)
+            {
+                return false;
+            }
+            contents[nextFreeLocation] = theListExercises1;
+            nextFreeLocation++;
             return true;
         }
 
-        
 
 
-        
 
-      
+
+
+
     }
 }
 

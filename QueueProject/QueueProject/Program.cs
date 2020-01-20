@@ -6,7 +6,7 @@ namespace QueueProject
     {
         static void Main(string[] args)
         {
-            Queue q1 = new Queue(10);
+            Queue q1 = new Queue(4);
 
             void DisplayMenu()
             {
@@ -34,7 +34,7 @@ namespace QueueProject
                         Console.WriteLine("Enter Name to add a person : ");
                         P1.Setname(Console.ReadLine());
 
-                        if (q1.Enqueue(P1) == true)
+                        if (q1.Enqueue(P1) == "True")
                         {
                             Console.WriteLine("Person has been added");
                         }
