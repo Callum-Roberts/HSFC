@@ -15,7 +15,21 @@ namespace linearSearch
 
             while (more)|| (count < 10);
             {
+                tempName = Console.ReadLine();
+                if (tempName == "STOP")
+                    more = false;
+                else
+                    names[count] = tempName;
+            }
 
+            string nameToSearch;
+            more = true;
+
+            while (more)
+            {
+                Console.WriteLine("Please enter name to seach for");
+                nameToSearch = Console.ReadLine();
+                if(nameToSearch ="STOP")
             }
 
         }
