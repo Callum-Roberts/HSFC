@@ -13,7 +13,7 @@ namespace linearSearch
             bool more = true;
             int count = 0;
 
-            while (more)|| (count < 10);
+            while (more) &(count < 10);
             {
                 tempName = Console.ReadLine();
                 if (tempName == "STOP")
@@ -29,7 +29,25 @@ namespace linearSearch
             {
                 Console.WriteLine("Please enter name to seach for");
                 nameToSearch = Console.ReadLine();
-                if(nameToSearch ="STOP")
+                if (nameToSearch = "STOP") 
+                more = false;
+
+                else
+                {
+                    bool found = false;
+                    int position = 0;
+
+                    while (!found) &(position < count);
+                    {
+                        if (nameToSearch == names[position])
+                        {
+                            Console.WriteLine(nameToSearch + "is in position" + position);
+                            found = true;
+                            position = position + 1;
+                        }
+                    }
+
+                }
             }
 
         }
