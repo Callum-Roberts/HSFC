@@ -45,7 +45,7 @@ namespace linearSearch
                     {
                         if (nameToSearch == names[position])
                         {
-                            Console.WriteLine(nameToSearch + "is in position" + position);
+                            Console.WriteLine(nameToSearch + " is in position :" + position);
                             found = true;                  
                         }
                         else
@@ -53,13 +53,32 @@ namespace linearSearch
                     }
                     if (!found)
                         Console.WriteLine("The name wasnt found ");
-                        
+                        Console.WriteLine(names);
 
+
+                    
                     
 
                 }
             }
-
+            bool swapMade = true;
+            string temp = "";
+            while (swapMade == true)
+            {
+                swapMade = false;
+                for (int position = 0; position <= names.Length - 2; position++)
+                {
+                    // if names[position] > names[position +1] 
+                    if (names[position].CompareTo(names[position + 1])>0)
+                    {
+                        temp = names[position];
+                        names[position] = names[position + 1];
+                        names[position + 1] = temp;
+                        swapMade = true;
+                    }
+                }
+            } 
         }
     }
-}
+    
+} 
