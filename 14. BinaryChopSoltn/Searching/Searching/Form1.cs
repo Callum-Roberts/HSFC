@@ -15,7 +15,7 @@ namespace Searching
         private Searching mySearching = new Searching();
 
         private String[] theListToSearch;
-        private int numOfItems = 7;
+        private int numOfItems = 20;
 
         public Form1()
         {

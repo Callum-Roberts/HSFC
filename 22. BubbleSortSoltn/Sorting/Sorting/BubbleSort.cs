@@ -11,7 +11,7 @@ namespace Sorting
         public void StandardBubbleSort(ref int[] aList)
         {
             bool swapMade = true;
-            int temp = 0;
+            string temp = "";
             while (swapMade == true)
             {
                 swapMade = false;
